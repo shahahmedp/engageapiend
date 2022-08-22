@@ -5,7 +5,7 @@ interface EmployeeAttributes{
     id?: number;
     firstName: string;
     lastName: string;
-    cmp:string
+    cmpID:string
     email: string;
     phone: number;
  
@@ -22,7 +22,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
      id!: number;
      firstName!: string;
      lastName!: string;
-     cmp!:string
+     cmpID!:string
      email!: string;
      phone!: number;
     static associate(models: any) {
@@ -47,7 +47,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
         type: DataTypes.STRING,
         allowNull: false
       },
-    cmp: {
+    cmpID: {
       type: DataTypes.STRING,
       allowNull: false
       },

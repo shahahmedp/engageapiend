@@ -54,7 +54,7 @@ require('./src/routes/employee.routes')(app)
 //check the request 
 app.get('/role',(req: any, res: any)=>{
     db.companies.findAll({
-        include:db.employee
+    //    include:db.employee
     }).then((result: any)=>{
         res.send(JSON.stringify(result))
     }).catch((err:any)=>{

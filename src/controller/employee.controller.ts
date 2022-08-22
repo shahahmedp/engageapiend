@@ -39,7 +39,7 @@ export class EmployeeController{
         db.employee.update({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            cmp:req.body.cmp.toString(),
+            cmpID:req.body.cmp.toString(),
             email: req.body.email,
             phone: req.body.phone
         }, { where: { id } }).then((up: any)=>{
