@@ -1,10 +1,10 @@
 import { NextFunction, Request , Response } from "express";
 import { check, validationResult } from 'express-validator'
-import {Auth} from '../controller/auth.controller'
-import {registerCheck,signInCheck} from '../utils/Checkdatapacket'
-import {VerifySignUp} from '../middlewares/verifySignUp';
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
+import {Auth} from '@controller/auth.controller'
+import {registerCheck,signInCheck} from '@utils/Checkdatapacket'
+import {VerifySignUp} from '@middleware/verifySignUp';
+import {logger} from '@utils/logger'
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
    
    
 module.exports = function(app: any){
@@ -18,7 +18,6 @@ module.exports = function(app: any){
     app.post(
         //path
         "/api/auth/signup",
-        logger.info("registration api called"),
         //check data payload
        registerCheck,
         (req: Request, res: Response, next: NextFunction) => {
@@ -46,7 +45,6 @@ module.exports = function(app: any){
 
      app.post("/api/auth/signin",
      //paylode check
-     logger.info("login api called "),
      signInCheck,
     (req: Request, res: Response, next: NextFunction) => {
         const errors = validationResult(req);

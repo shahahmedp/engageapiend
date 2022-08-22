@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import 'module-alias/register';
 import db from './src/models';
 import {user} from './src/seeders/user'
 import {role} from './src/seeders/role'

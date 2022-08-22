@@ -1,8 +1,8 @@
 import {Request,Response, NextFunction} from 'express'
 import { Sequelize, Op } from 'sequelize';
-import db from '../models';
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
+import db from '@model';
+import {logger} from '@utils/logger'
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
 
 export class VerifySignUp{
 /**

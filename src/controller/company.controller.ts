@@ -1,7 +1,7 @@
 import {Request,Response} from 'express'
-import db from '../models';
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
+import db from '@model';
+import {logger} from '@utils/logger'
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
 
 export class CompanyController{
 /**

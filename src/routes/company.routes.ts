@@ -1,11 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import {validationResult } from 'express-validator'
-import { Authjwt } from '../middlewares/authjwt'
-import {VerifyCompany} from '../middlewares/verifyCompany'
-import { companyCheck } from '../utils/Checkdatapacket';
-import {CompanyController} from '../controller/company.controller';
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
+import { Authjwt } from '@middleware/authjwt'
+import {VerifyCompany} from '@middleware/verifyCompany'
+import { companyCheck } from '@utils/Checkdatapacket';
+import {CompanyController} from '@controller/company.controller';
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
    
 
 
@@ -24,7 +23,6 @@ module.exports = function (app: any) {
  */
     app.post("/api/post/cmpy",
         companyCheck,
-        logger.info("company resgister api called"),
         (req: Request, res: Response, next: NextFunction) => {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
@@ -43,7 +41,6 @@ module.exports = function (app: any) {
  * @param res
  */
     app.get("/api/get/cmpy",
-    logger.info("company get api called"), 
     [
         //middleware
         Authjwt.VerifyToken, Authjwt.isCompany],
@@ -56,7 +53,6 @@ module.exports = function (app: any) {
  * @param res
  */
     app.get("/api/getbyid/cmpy/:id",
-    logger.info("get by id company api called "), 
     [
         //middleware
         Authjwt.VerifyToken, Authjwt.isCompany],
@@ -69,7 +65,6 @@ module.exports = function (app: any) {
  * @param res
  */
     app.put("/api/putbyid/cmpy/:id",
-    logger.info("putbyId api called of company"),
     //check request body
         companyCheck,
 
@@ -90,7 +85,6 @@ module.exports = function (app: any) {
  * @param res
  */
     app.delete("/api/deleteById/cmpy/:id", 
-    logger.info("delete by id of company called "),
     //middlewares
     [Authjwt.VerifyToken, Authjwt.isAdmin],
     //controller

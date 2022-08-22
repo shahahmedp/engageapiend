@@ -1,5 +1,5 @@
 import { createLogger, format, transports } from 'winston';
-import options from '../config/logConfig.json';
+import options from '@config/logConfig.json';
 
 export const logger=createLogger({
         transports: [

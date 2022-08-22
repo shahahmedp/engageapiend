@@ -1,11 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import { validationResult } from 'express-validator'
-import { Authjwt } from '../middlewares/authjwt';
-import {VerifyEmployee} from '../middlewares/verifyEmployee'
-import { employeeCheck } from '../utils/Checkdatapacket';
-import {EmployeeController} from '../controller/employee.controller';
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
+import { Authjwt } from '@middleware/authjwt';
+import {VerifyEmployee} from '@middleware/verifyEmployee'
+import { employeeCheck } from '@utils/Checkdatapacket';
+import {EmployeeController} from '@controller/employee.controller';
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
  
 
 module.exports = function (app: any) {
@@ -25,7 +24,7 @@ module.exports = function (app: any) {
         (req: Request, res: Response, next: NextFunction) => {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
-                res.json(errors)
+                res.status(400).json({"status":dailogue.code400.message,"message":errors})
             } else { next() }
         },
         //middleware for token and employe previlage verification
@@ -66,7 +65,7 @@ module.exports = function (app: any) {
         (req:Request, res:Response, next: NextFunction) => {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
-                res.json(errors)
+                res.status(dailogue.code400.code).json({"status":dailogue.code400.message,"message":errors})
             } else { next() }
         },
         //middleware for token and admin adn company previlage verification

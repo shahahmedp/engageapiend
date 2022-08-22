@@ -1,8 +1,8 @@
 import {Request,Response} from 'express'
-import db from '../models';
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
-import {secretKey} from '../config/auth.config';
+import db from '@model';
+import {logger} from '@utils/logger'
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
+import {secretKey} from '@config/auth.config';
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 

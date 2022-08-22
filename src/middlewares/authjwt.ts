@@ -1,10 +1,9 @@
 import {Request,Response, NextFunction} from 'express'
 import jwt from "jsonwebtoken";
-import { decode } from 'punycode';
-import {secretKey} from "../config/auth.config";
-import db from "../models";
-import {logger} from '../utils/logger'
-import {StatusConstants as dailogue} from '../constants/StatusConstants';
+import {secretKey} from '@config/auth.config'
+import db from "@model";
+import {logger} from '@utils/logger'
+import {StatusConstants as dailogue} from '@constant/StatusConstants';
 const User = db.user;
 
 export class Authjwt{
