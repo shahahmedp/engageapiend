@@ -1,0 +1,44 @@
+react-usememo
+usecallback
+react.memo=> unnecessary rerendering
+pure Composition
+heigher order component
+
+prop drilling=> context api, redux
+
+optimization in react
+webpack is used to reduce build size 
+
+lazy loading
+
+virtual dom
+
+shaddow dom
+
+chunking
+
+closure
+
+promise
+
+promise vs observables
+
+async await
+
+callback vs promise
+
+event loop 
+
+
+axios interceptor
+
+type checking in props props types 
+
+generator
+
+call bind
+
+shallow copy
+
+deep copy
+

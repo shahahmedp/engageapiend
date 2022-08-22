@@ -1,0 +1,9 @@
+{
+    "file": {
+        "level": "info",
+        "filename": "../consoleLogs/cnsl.log"
+    },
+    "console": {
+        "level": "debug"
+    }
+}

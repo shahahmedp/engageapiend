@@ -1,0 +1,214 @@
+{
+    "info": {
+        "_postman_id": "089b13e6-43d4-49bb-a7d8-77e4662bdb0b",
+        "name": "engageapiend",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "engageapiend",
+            "item": [
+                {
+                    "name": "register",
+                    "id": "babd41bf-5c70-4668-bd8c-2e0595fe6084",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"userName\": \"shahbaazp12\",\r\n    \"email\": \"shahbaazap12@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"roles\": [\"adin\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "http://localhost:3001/api/auth/signup"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "login",
+                    "id": "f16328ee-c165-4083-96f6-d557fc3dc874",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"username\": \"shahbaazp12\",\r\n    \"email\": \"shahbaazap12@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"roles\": [\"admin\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "http://localhost:3001/api/auth/signup"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "company",
+                    "item": [
+                        {
+                            "name": "companyPost",
+                            "id": "18978dbf-1cd3-4b74-aa0d-d00684848f69",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "url": "http://localhost:3000/api/post/cmpy"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "get",
+                            "id": "7ded1322-036a-4e92-9e95-ac3ca9e1bf54",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-access-token",
+                                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhNjllYmU1LTI1NjgtNDBjNC05YzdhLTYyZjM2ZDQ1NDhmYSIsImlhdCI6MTY2MTA5NjkzMCwiZXhwIjoxNjYxMTgzMzMwfQ.kRFwz0mxq4D3PjN0NUaOyepNpKrBxaWtATROQkAwSP0",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": "http://localhost:3000/api/get/cmpy"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "getByID",
+                            "id": "5d84f7f4-74f1-4616-9269-bfffd9d3230b",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-access-token",
+                                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhNjllYmU1LTI1NjgtNDBjNC05YzdhLTYyZjM2ZDQ1NDhmYSIsImlhdCI6MTY2MTA5NjkzMCwiZXhwIjoxNjYxMTgzMzMwfQ.kRFwz0mxq4D3PjN0NUaOyepNpKrBxaWtATROQkAwSP0",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": "http://localhost:3000/api/get/cmpy"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "putbyid",
+                            "id": "903d9937-4f67-46a5-8e82-ba86da773d5a",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": null
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "deletbyid",
+                            "id": "ac43fd0f-9314-44e5-a627-572e84a92258",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": null
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "getUser",
+                            "id": "113c78ce-aa71-4dd7-9356-1546a68d0b12",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": null
+                            },
+                            "response": []
+                        }
+                    ],
+                    "id": "02aa1a04-849b-40ba-abd8-6e92f0ac8059"
+                },
+                {
+                    "name": "employee",
+                    "item": [
+                        {
+                            "name": "employeePost",
+                            "id": "b90da1ac-8232-4d56-955f-85dc9de0842b",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "url": "http://localhost:3000/api/post/cmpy"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "get",
+                            "id": "e829847a-49cf-4397-816b-374f0c0976db",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-access-token",
+                                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhNjllYmU1LTI1NjgtNDBjNC05YzdhLTYyZjM2ZDQ1NDhmYSIsImlhdCI6MTY2MTA5NjkzMCwiZXhwIjoxNjYxMTgzMzMwfQ.kRFwz0mxq4D3PjN0NUaOyepNpKrBxaWtATROQkAwSP0",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": "http://localhost:3000/api/get/cmpy"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "getByID",
+                            "id": "e8d2cca0-388a-44e4-8013-d552bec1fce9",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "x-access-token",
+                                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNhNjllYmU1LTI1NjgtNDBjNC05YzdhLTYyZjM2ZDQ1NDhmYSIsImlhdCI6MTY2MTA5NjkzMCwiZXhwIjoxNjYxMTgzMzMwfQ.kRFwz0mxq4D3PjN0NUaOyepNpKrBxaWtATROQkAwSP0",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": "http://localhost:3000/api/get/cmpy"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "putbyid",
+                            "id": "051e6897-24fc-48eb-adc4-3c5f480ed3b3",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "x-access-token",
+                                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2YWU0YjU5LTlkOGEtNGRlNy1hZTNjLWY2OWI3NzEwMThkOCIsImlhdCI6MTY2MTA5OTQzOSwiZXhwIjoxNjYxMTg1ODM5fQ.wmuR6bgD3Qi7aZYDVfLSsBl9qdiwzwrZrqHgRTamCNU",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n    \"firstName\": \"uamir\",\r\n    \"lastName\": \"p\",\r\n    \"cmp\":\"e5f83829-c29e-4a7e-87a1-c7365cb9ad0d\",\r\n    \"email\": \"shahbaazandap@gmail.com\",\r\n    \"phone\": 83103664\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": "http://localhost:3000/api/putbyid/emp/a3fd0493-1a9d-47f2-a906-a8ebb93de8eb "
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "deletbyid",
+                            "id": "160e526d-eb39-4386-84f6-69bf70f3f84a",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": null
+                            },
+                            "response": []
+                        }
+                    ],
+                    "id": "fe784fd1-1e8a-465e-a6bb-d155ad0ba98a"
+                }
+            ],
+            "id": "193c6adf-bb0d-4977-bcfd-0f642e4548cb"
+        }
+    ]
+}
